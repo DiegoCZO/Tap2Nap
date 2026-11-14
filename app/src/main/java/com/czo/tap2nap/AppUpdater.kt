@@ -17,6 +17,13 @@ import java.net.URL
 // Android asks the user to confirm, then closes the app and installs the new version.
 object AppUpdater {
 
+    private const val APK_NAME = "update.apk"
+
+    // Removes the APK left over from the last update.
+    fun cleanUp(context: Context) {
+        File(context.cacheDir, APK_NAME).delete()
+    }
+
     // The user has to allow "install unknown apps" for Tap2Nap once.
     fun canInstall(context: Context): Boolean = context.packageManager.canRequestPackageInstalls()
 
@@ -24,7 +31,7 @@ object AppUpdater {
     // is unknown). Returns null if something fails.
     suspend fun download(context: Context, url: String, onProgress: (Float?) -> Unit): File? =
         withContext(Dispatchers.IO) {
-            val file = File(context.cacheDir, "update.apk")
+            val file = File(context.cacheDir, APK_NAME)
             try {
                 file.delete()
                 val conn = (URL(url).openConnection() as HttpURLConnection).apply {

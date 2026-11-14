@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
     tags: ['v*']        # a tag like v1.12 also publishes a release
+    # Don't build when only the README, screenshots or license change.
+    # (Tags always build, these filters don't apply to them.)
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'LICENSE'
   workflow_dispatch:
 
 permissions:
@@ -54,9 +60,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Changelog: commit messages since the previous tag
+          # Changelog: commit messages since the previous tag, except the ones that
+          # start with chore:, docs:, ci:, build:, test: or refactor: (not useful to users).
           PREV=$(git describe --tags --abbrev=0 "${GITHUB_REF_NAME}^" 2>/dev/null || true)
           if [ -n "$PREV" ]; then RANGE="$PREV..$GITHUB_REF_NAME"; else RANGE="$GITHUB_REF_NAME"; fi
-          git log "$RANGE" --no-merges --pretty="- %s" > notes.md
+          { git log "$RANGE" --no-merges --pretty="%s" \
+              | grep -viE '^(chore|docs|ci|build|test|refactor)(\(.*\))?:' || true; } \
+            | sed 's/^/- /' > notes.md
+          if [ ! -s notes.md ]; then echo "- Small fixes and improvements" > notes.md; fi
           gh release create "$GITHUB_REF_NAME" app/build/outputs/apk/release/*.apk \
             --title "Tap2Nap ${GITHUB_REF_NAME}" --notes-file notes.md

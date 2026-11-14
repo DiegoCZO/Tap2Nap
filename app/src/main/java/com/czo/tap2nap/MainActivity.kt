@@ -90,6 +90,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         serviceEnabled = isServiceEnabled()
+        AppUpdater.cleanUp(this)
         // Show the guided setup the first time, unless the service is already on.
         showOnboarding = !serviceEnabled &&
             !Prefs.get(this).getBoolean(Prefs.KEY_ONBOARDING_DONE, false)
