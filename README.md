@@ -56,11 +56,5 @@ If the first tap opens or scrolls something, it doesn't count.
   need to add names to `BOUNCER_ID_HINTS` or `LAUNCHER_OVERLAY_IDS` in
   `DoubleTapService.kt`.
 
-## Building
-Open the project in Android Studio, or run `./gradlew assembleRelease` with JDK 17 or 21.
-
-Pushing a tag like `v1.13` builds the APK on GitHub and publishes a release. The release
-notes are the commit messages since the previous tag.
-
 ## License
 [MIT](LICENSE), 2026 DiegoCZO
