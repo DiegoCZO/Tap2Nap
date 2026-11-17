@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="service_description">Éteint l’écran d’un double appui sur l’écran d’accueil et/ou l’écran de verrouillage. Il ne lit ni n’enregistre rien de ce que vous tapez : il détecte seulement le moment de chaque appui et verrouille le téléphone.</string>
+
+    <!-- État -->
+    <string name="status_on_title">Tap2Nap est activé</string>
+    <string name="status_on_body">Appuyez deux fois sur l’écran d’accueil ou de verrouillage pour éteindre l’écran.</string>
+    <string name="status_off_title">Tap2Nap est désactivé</string>
+    <string name="status_off_body">Activez le service d’accessibilité Tap2Nap pour commencer.</string>
+    <string name="btn_accessibility_settings">Paramètres d’accessibilité</string>
+    <string name="btn_turn_on">Activer</string>
+
+    <!-- Mise à jour -->
+    <string name="update_available_title">Mise à jour disponible : %1$s</string>
+    <string name="update_you_have">Vous avez la version %1$s.</string>
+
+    <!-- Où ça fonctionne -->
+    <string name="section_where">Où ça fonctionne</string>
+    <string name="home_title">Écran d’accueil</string>
+    <string name="home_summary">Votre lanceur par défaut</string>
+    <string name="lock_title">Écran de verrouillage</string>
+    <string name="lock_summary">Ignoré quand le clavier du code PIN est affiché</string>
+
+    <!-- Options -->
+    <string name="section_options">Options</string>
+    <string name="pocket_title">Protection poche</string>
+    <string name="pocket_summary">Ne fait rien si le capteur de proximité est couvert</string>
+    <string name="vibrate_title">Vibrer</string>
+    <string name="vibrate_summary">Courte vibration quand l’écran s’éteint</string>
+    <string name="language_title">Langue (Language, Idioma)</string>
+    <string name="language_system">Langue du système</string>
+    <string name="btn_cancel">Annuler</string>
+
+    <!-- Vitesse -->
+    <string name="section_speed">Vitesse du double appui</string>
+    <string name="speed_label">Délai maximal entre les appuis : %1$d ms</string>
+    <string name="speed_hint">Plus bas = il faut appuyer plus vite</string>
+
+    <!-- Paramètres restreints -->
+    <string name="section_restricted">Impossible de l’activer ?</string>
+    <string name="restricted_body">Sur Android 13 et versions ultérieures, l’accessibilité est restreinte pour les applis installées en dehors du Play Store. Ouvrez Infos sur l’appli → menu ⋮ (en haut à droite) → Autoriser les paramètres restreints, puis réessayez.</string>
+    <string name="btn_app_info">Ouvrir les infos de l’appli</string>
+
+    <!-- À propos -->
+    <string name="section_about">À propos</string>
+    <string name="version_label">Version %1$s</string>
+    <string name="checking">Vérification…</string>
+    <string name="check_failed">Impossible de vérifier (pas de connexion ou aucune version publiée)</string>
+    <string name="check_available">La version %1$s est disponible</string>
+    <string name="check_up_to_date">Vous avez la dernière version</string>
+    <string name="btn_check_updates">Rechercher des mises à jour</string>
+
+    <!-- Fenêtre de mise à jour -->
+    <string name="btn_update">Mettre à jour</string>
+    <string name="new_version_title">Nouvelle version : %1$s</string>
+    <string name="whats_new">Nouveautés</string>
+    <string name="no_notes">Aucun détail pour cette version.</string>
+    <string name="btn_install">Installer</string>
+    <string name="btn_later">Plus tard</string>
+    <string name="btn_open_browser">Télécharger dans le navigateur</string>
+    <string name="downloading">Téléchargement… %1$d %%</string>
+    <string name="downloading_unknown">Téléchargement…</string>
+    <string name="installing_hint">Confirmez la mise à jour dans la fenêtre d’Android.</string>
+    <string name="permission_hint">Autorisez Tap2Nap à installer des applis, puis revenez et appuyez à nouveau sur Installer.</string>
+    <string name="download_failed">Le téléchargement a échoué. Vérifiez votre connexion et réessayez.</string>
+    <string name="install_failed">Impossible d’installer la mise à jour. %1$s</string>
+
+    <!-- Intensité de la vibration -->
+    <string name="vibration_strength_title">Intensité</string>
+    <string name="vibration_strength_hint">Appuyez sur une option pour la ressentir</string>
+    <string name="strength_light">Légère</string>
+    <string name="strength_medium">Moyenne</string>
+    <string name="strength_strong">Forte</string>
+
+    <!-- Configuration guidée -->
+    <string name="onb_step">Étape %1$d sur %2$d</string>
+    <string name="onb_welcome_title">Bienvenue dans Tap2Nap</string>
+    <string name="onb_welcome_body">Éteignez l’écran d’un double appui sur l’écran d’accueil ou de verrouillage.</string>
+    <string name="onb_disclosure_title">Pourquoi Tap2Nap a besoin de l’accessibilité</string>
+    <string name="onb_disclosure_body">Tap2Nap utilise l’API du service d’accessibilité d’Android pour :\n• détecter quand vous touchez l’écran (seulement le moment de chaque appui, pas l’endroit touché ni ce que vous tapez) ;\n• vérifier si l’écran d’accueil, le tiroir d’applis, les applis récentes ou le clavier du code PIN sont affichés ;\n• éteindre l’écran à votre place.\n\nTap2Nap ne collecte, n’enregistre ni ne partage aucune donnée, et ne lit jamais ce que vous tapez.</string>
+    <string name="btn_agree">J’accepte, continuer</string>
+    <string name="btn_not_now">Pas maintenant</string>
+    <string name="onb_enable_title">Activez Tap2Nap</string>
+    <string name="onb_enable_body">Dans Accessibilité, ouvrez Tap2Nap (dans Applications téléchargées) et activez-le.</string>
+    <string name="btn_open_accessibility">Ouvrir les paramètres d’accessibilité</string>
+    <string name="onb_restricted_title">Android affiche « Paramètre restreint » ?</string>
+    <string name="onb_restricted_body">C’est normal pour les applis installées en dehors du Play Store. Ouvrez Infos sur l’appli → menu ⋮ (en haut à droite) → Autoriser les paramètres restreints, puis réessayez.</string>
+    <string name="onb_done_title">C’est prêt !</string>
+    <string name="onb_done_body">Appuyez deux fois sur l’écran d’accueil ou de verrouillage pour éteindre l’écran. Vous pouvez modifier les options à tout moment.</string>
+    <string name="btn_start">Aller aux paramètres</string>
+
+    <!-- Langue et thème -->
+    <string name="section_appearance">Langue et thème</string>
+    <string name="theme_title">Thème</string>
+    <string name="theme_system">Selon le système</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Sombre</string>
+</resources>

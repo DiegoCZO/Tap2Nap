@@ -38,7 +38,7 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.LargeTopAppBar
+import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
@@ -170,7 +170,7 @@ private fun SettingsScreen(
     val view = LocalView.current
     val prefs = remember { Prefs.get(context) }
     val scope = rememberCoroutineScope()
-    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
+    val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
 
     var update by remember { mutableStateOf<UpdateChecker.Release?>(null) }
     var dialogRelease by remember { mutableStateOf<UpdateChecker.Release?>(null) }
@@ -201,7 +201,8 @@ private fun SettingsScreen(
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            LargeTopAppBar(
+            // Normal-size bar: the large one left an empty block at the top.
+            TopAppBar(
                 title = { Text(stringResource(R.string.app_name)) },
                 scrollBehavior = scrollBehavior
             )
@@ -700,7 +701,8 @@ private fun LanguageItem() {
         options = listOf(
             "" to stringResource(R.string.language_system),
             "en" to stringResource(R.string.language_english),
-            "es" to stringResource(R.string.language_spanish)
+            "es" to stringResource(R.string.language_spanish),
+            "fr" to stringResource(R.string.language_french)
         ),
         selected = current
     ) { tag ->

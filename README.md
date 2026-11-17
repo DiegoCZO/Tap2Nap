@@ -3,7 +3,7 @@
 Double tap to turn off the screen on Android. Works on the home screen and on the lock
 screen. Small, open source, no ads and no tracking.
 
-Android 9 or newer. Available in English and Spanish.
+Android 9 or newer. Available in English, Spanish and French.
 
 <p align="center">
   <img src="docs/screenshots/settings.png" width="260" alt="Settings" />
@@ -25,7 +25,8 @@ updates automatically.
 - Optional vibration, light, medium or strong. It works even with the phone on silent.
 - You can change how fast the double tap has to be.
 - When there's a new version the app tells you, shows what changed and installs it.
-- Light, dark or system theme, and English or Spanish (language switch needs Android 13+).
+- Light, dark or system theme, and English, Spanish or French (language switch needs
+  Android 13+).
 
 ## Setup
 1. Install the APK and open Tap2Nap. It walks you through the setup.
