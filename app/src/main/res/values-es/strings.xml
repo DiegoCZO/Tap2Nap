@@ -27,7 +27,7 @@
     <string name="pocket_summary">No hace nada si el sensor de proximidad está tapado</string>
     <string name="vibrate_title">Vibrar</string>
     <string name="vibrate_summary">Vibración corta al apagar la pantalla</string>
-    <string name="language_title">Idioma (Language, Langue)</string>
+    <string name="language_title">Idioma (Language)</string>
     <string name="language_system">Idioma del sistema</string>
     <string name="btn_cancel">Cancelar</string>
 

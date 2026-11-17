@@ -28,7 +28,7 @@
     <string name="pocket_summary">Do nothing if the proximity sensor is covered</string>
     <string name="vibrate_title">Vibrate</string>
     <string name="vibrate_summary">Short vibration when the screen turns off</string>
-    <string name="language_title">Language (Idioma, Langue)</string>
+    <string name="language_title">Language</string>
     <string name="language_system">System default</string>
     <string name="language_english" translatable="false">English</string>
     <string name="language_spanish" translatable="false">Español</string>

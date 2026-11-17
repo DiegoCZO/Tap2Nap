@@ -27,7 +27,7 @@
     <string name="pocket_summary">Ne fait rien si le capteur de proximité est couvert</string>
     <string name="vibrate_title">Vibrer</string>
     <string name="vibrate_summary">Courte vibration quand l’écran s’éteint</string>
-    <string name="language_title">Langue (Language, Idioma)</string>
+    <string name="language_title">Langue (Language)</string>
     <string name="language_system">Langue du système</string>
     <string name="btn_cancel">Annuler</string>
 
